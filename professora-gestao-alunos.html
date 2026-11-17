@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=1140">
+<title>bloom english &mdash; gest&atilde;o de alunos</title>
+<meta name="description" content="Base de alunos matriculados, conversao de leads experimentais e indicadores do negocio.">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="painel" data-area="professora">
+
+<a class="pular" href="#conteudo">pular para o conte&uacute;do</a>
+
+<!-- ============ BARRA DO TOPO ============ -->
+<div class="topo">
+  <div class="topo-in">
+    <div class="topo-marca">
+      <svg class="topo-flor" width="30" height="30" viewBox="0 0 46 46" aria-hidden="true" focusable="false">
+        <circle cx="23" cy="10" r="9.5" fill="#942113"></circle>
+        <circle cx="36" cy="23" r="9.5" fill="#942113"></circle>
+        <circle cx="23" cy="36" r="9.5" fill="#942113"></circle>
+        <circle cx="10" cy="23" r="9.5" fill="#942113"></circle>
+        <circle cx="23" cy="23" r="7" fill="#fa8072"></circle>
+      </svg>
+      <span class="topo-nome">bloom english</span>
+    </div>
+    <div class="topo-nav">
+      <a class="nav-item" href="professora-agenda.html">Agenda</a>
+      <a class="nav-item" href="professora-gestao-aulas.html">Gest&atilde;o de Aulas</a>
+      <a class="nav-item nav-atual" href="professora-gestao-alunos.html" aria-current="page">Gest&atilde;o de Alunos</a>
+      <a class="nav-sair" href="index.html">Sair</a>
+    </div>
+  </div>
+</div>
+
+<div class="pagina">
+  <div class="folha-area">
+    <div class="folha-sombra" aria-hidden="true"></div>
+    <div class="folha" id="conteudo">
+
+      <div class="cabeca">
+        <div class="cabeca-txt">
+          <h1>Gest&atilde;o de Alunos e Estat&iacute;sticas</h1>
+          <p class="legenda">Consulte e gerencie a base de alunos matriculados, converta leads experimentais e acompanhe os indicadores do neg&oacute;cio.</p>
+        </div>
+        <div class="cabeca-acoes">
+          <a class="pbotao-sec" href="professora-gestao-aulas.html#nova-aula">Agendar Experimental</a>
+        </div>
+      </div>
+
+      <div class="numeros" id="numeros-alunos"></div>
+
+      <h2 class="secao">Cadastrar ou converter novo aluno</h2>
+
+      <form class="bloco-form" action="#" method="post" id="form-novo-aluno">
+        <div class="duas">
+          <div class="esq">
+            <div class="campo-p">
+              <label for="nome-aluno">Nome completo do aluno</label>
+              <input type="text" id="nome-aluno" name="nome-aluno" autocomplete="name" placeholder="Nome do aluno">
+            </div>
+          </div>
+          <div class="dir">
+            <div class="campo-p">
+              <label for="email-aluno">E-mail de acesso</label>
+              <input type="email" id="email-aluno" name="email-aluno" autocomplete="email" placeholder="aluno@email.com">
+            </div>
+          </div>
+        </div>
+
+        <div class="duas">
+          <div class="esq">
+            <div class="campo-p">
+              <label for="telefone-aluno">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone-aluno" name="telefone-aluno" autocomplete="tel" placeholder="(11) 99999-9999">
+            </div>
+          </div>
+          <div class="dir">
+            <div class="campo-p">
+              <label for="vinculo">V&iacute;nculo / origem da matr&iacute;cula</label>
+              <select id="vinculo" name="vinculo"></select>
+            </div>
+          </div>
+        </div>
+
+        <button class="pbotao pbotao-largo" type="submit">Efetuar matr&iacute;cula do aluno</button>
+      </form>
+
+      <h2 class="secao">Base de alunos e prospectos</h2>
+
+      <form action="#" method="post">
+        <table class="tabela">
+          <caption class="oculto">Alunos matriculados e leads em prospec&ccedil;&atilde;o</caption>
+          <thead>
+            <tr>
+              <th scope="col">Nome do Aluno</th>
+              <th scope="col">E-mail de Contato</th>
+              <th scope="col">Telefone</th>
+              <th scope="col">Tipo de V&iacute;nculo</th>
+              <th scope="col">Status da Conta</th>
+              <th scope="col">A&ccedil;&otilde;es</th>
+            </tr>
+          </thead>
+          <tbody id="lista-alunos"></tbody>
+        </table>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<script src="js/mock-data.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

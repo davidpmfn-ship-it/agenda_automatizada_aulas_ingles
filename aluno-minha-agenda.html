@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=1140">
+<title>bloom english &mdash; minha agenda</title>
+<meta name="description" content="Suas aulas confirmadas e solicitacao de novos horarios na bloom english.">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="painel" data-area="aluno">
+
+<a class="pular" href="#conteudo">pular para o conte&uacute;do</a>
+
+<!-- ============ BARRA DO TOPO ============ -->
+<div class="topo">
+  <div class="topo-in">
+    <div class="topo-marca">
+      <svg class="topo-flor" width="30" height="30" viewBox="0 0 46 46" aria-hidden="true" focusable="false">
+        <circle cx="23" cy="10" r="9.5" fill="#942113"></circle>
+        <circle cx="36" cy="23" r="9.5" fill="#942113"></circle>
+        <circle cx="23" cy="36" r="9.5" fill="#942113"></circle>
+        <circle cx="10" cy="23" r="9.5" fill="#942113"></circle>
+        <circle cx="23" cy="23" r="7" fill="#fa8072"></circle>
+      </svg>
+      <span class="topo-nome">bloom english</span>
+    </div>
+    <div class="topo-nav">
+      <a class="nav-item nav-atual" href="aluno-minha-agenda.html" aria-current="page">Minha Agenda</a>
+      <a class="nav-item" href="aluno-meu-progresso.html">Meu Progresso</a>
+      <a class="nav-sair" href="index.html">Sair</a>
+    </div>
+  </div>
+</div>
+
+<div class="pagina">
+  <div class="folha-area">
+    <div class="folha-sombra" aria-hidden="true"></div>
+    <div class="folha" id="conteudo">
+
+      <div class="cabeca">
+        <div class="cabeca-txt">
+          <h1>Minha Agenda de Aulas</h1>
+          <p class="legenda">Acompanhe os hor&aacute;rios das suas aulas confirmadas e solicite novos hor&aacute;rios dispon&iacute;veis.</p>
+        </div>
+      </div>
+
+      <div class="proxima">
+        <div class="proxima-txt">
+          <p class="proxima-rot">Sua pr&oacute;xima aula</p>
+          <p class="proxima-quando"></p>
+          <p class="proxima-onde"></p>
+        </div>
+        <div class="proxima-acao">
+          <a class="pbotao" href="#" data-acao="sala" data-link="">Entrar na sala virtual</a>
+        </div>
+      </div>
+
+      <h2 class="secao">Hor&aacute;rios da semana</h2>
+
+      <table class="grade">
+        <caption class="oculto"></caption>
+        <thead></thead>
+        <tbody id="grade-aluno"></tbody>
+      </table>
+
+      <h2 class="secao">Solicitar agendamento ou reagendamento</h2>
+
+      <form class="bloco-form" action="#" method="post" id="form-solicitacao">
+        <div class="duas">
+          <div class="esq">
+            <div class="campo-p">
+              <label for="data-pretendida">Data pretendida</label>
+              <input type="date" id="data-pretendida" name="data-pretendida">
+            </div>
+          </div>
+          <div class="dir">
+            <div class="campo-p">
+              <label for="horario-livre">Hor&aacute;rio dispon&iacute;vel</label>
+              <select id="horario-livre" name="horario-livre"></select>
+            </div>
+          </div>
+        </div>
+
+        <div class="campo-p campo-largo">
+          <label for="observacao">Observa&ccedil;&atilde;o / motivo (opcional)</label>
+          <input type="text" id="observacao" name="observacao" placeholder="Ex: Gostaria de reposi&ccedil;&atilde;o da aula anterior ou treino de conversa&ccedil;&atilde;o.">
+        </div>
+
+        <button class="pbotao pbotao-largo" type="submit">Enviar solicita&ccedil;&atilde;o &agrave; professora</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<script src="js/mock-data.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
